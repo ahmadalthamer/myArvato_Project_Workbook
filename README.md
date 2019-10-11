@@ -1,53 +1,34 @@
-# Disaster Response Pipeline Project
+# Bertelsmann Arvato Project
+Arvato Financial Solutions provides credit management solutions in all segments of the customer lifecycle: ID, fraud and credit risk management, payment, Financing Services and Debt Collection Services. Our purpose is to help the company predict which person will be a potential customer
+### Installations:
+In addition of Anaconda distribution. you need to install the following pagckages using pip --install command
+Installations
+1. [progressbar](https://pypi.org/project/progressbar/)
+2. [XGBRegressor](https://xgboost.readthedocs.io/en/latest/python/python_api.html)
 
-In this course, you've learned and built on your data engineering skills to expand your opportunities and potential as a data scientist. In this project, you'll apply these skills to analyze disaster data from Figure Eight to build a model for an API that classifies disaster messages.
-In the Project Workspace, you'll find a data set containing real messages that were sent during disaster events. You will be creating a machine learning pipeline to categorize these events so that you can send the messages to an appropriate disaster relief agency.
+### Summary:
 
-The project  include a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data. 
+Phases of the project:
 
-In the Project Workspace, you'll find a data set containing real messages that were sent during disaster events. You will be creating a machine learning pipeline to categorize these events so that you can send the messages to an appropriate disaster relief agency.
-Send Feedback
+1. **Customer Segmentation Report** - This analyzed demographics data for customers of a mail-order sales company in Germany, comparing it against demographics information for the general population. This used unsupervised learning techniques to perform customer segmentation, identifying the parts of the population that best describe the core
+customer base of the company. 
 
+2. **Supervised Learning Model** -This used the previous analysis to build a machine learning model that predicts whether or not each individual will respond to the campaign.
 
-Project Overview
-In this course, you've learned and built on your data engineering skills to expand your opportunities and potential as a data scientist. In this project, you'll apply these skills to analyze disaster data from Figure Eight to build a model for an API that classifies disaster messages.
-In the Project Workspace, you'll find a data set containing real messages that were sent during disaster events. You will be creating a machine learning pipeline to categorize these events so that you can send the messages to an appropriate disaster relief agency.
-Your project will include a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data. This project will show off your software skills, including your ability to create basic data pipelines and write clean, organized code!
-Below are a few screenshots of the web app.
+3. **Kaggle Competition** - This used the chosen model to make predictions on the campaign data as part of a Kaggle Competition and see how it measures up to the other fellow students.
 
-Project Components ,There are three components you'll find in this project 
-1. ETL Pipeline
-       In a Python script, process_data.py, write a data cleaning pipeline that:
-        Loads the messages and categories dataset Merges the two datasets Cleans the data 
-        Stores it in a SQLite database
-2. ML Pipeline
-        In a Python script, train_classifier.py, write a machine learning pipeline that:
-        Loads data from the SQLite database
-        Splits the dataset into training and test sets
-         Builds a text processing and machine learning pipeline
-        Trains and tunes a model using GridSearchCV
-        Outputs results on the test set
-        Exports the final model as a pickle file
-3. Flask Web App
-    you'll display your results in a Flask web app. We have provided a workspace for you with starter files. You will need to upload your       database file and pkl file with your mode
+### Data Files
+Data are confidential
+1. `azdias.csv` - Demographics data for the general population of Germany - 891,211 persons (rows) x 366 features (columns)
 
-### Instructions:
-Run the following commands in the project's root directory to set up your database and model.
+2. `customers.csv` - Demographics data for customers of a mail-order company - 191,652 persons (rows) x 369 features (columns)
 
-To run ETL pipeline that cleans data and stores in database python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
-To run ML pipeline that trains classifier and saves python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
-Run the following command in the app's directory to run your web app. python run.py
+3. `mailout_train.csv` - Demographics data for individuals who were targets of a marketing campaign (train) - 42,982 persons (rows) x 367 (columns)
 
-Go to URL that is shown in cmd
-### Instructions:
-1. Run the following commands in the project's root directory to set up your database and model.
+4. `mailout_test.csv` - Demographics data for individuals who were targets of a marketing campaign (test) - 42,833 persons (rows) x 366 (columns)
 
-    - To run ETL pipeline that cleans data and stores in database
-        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
-    - To run ML pipeline that trains classifier and saves
-        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+5. `feat_info.csv` - Contains a summary of properties for each demographics data column created by the user - 366 features (rows) x 4 (columns)
 
-2. Run the following command in the app's directory to run your web app.
-    `python run.py`
+### Acknowledgments
 
-3. Go to URL shown in cmd
+I would like to thank [Udacity](https://eu.udacity.com/) for this journey, and [Arvato](https://www.arvato.com/)  for providing the data.
