@@ -1,5 +1,7 @@
 # Bertelsmann Arvato Project
 Arvato Financial Solutions provides credit management solutions in all segments of the customer lifecycle: ID, fraud and credit risk management, payment, Financing Services and Debt Collection Services. Our purpose is to help the company predict which person will be a potential customer
+
+refer to my blog [medium] (https://medium.com/@ahmad.n.althamer/create-a-customer-segmentation-report-for-arvato-financial-services-ae82314ef97b?source=friends_link&sk=06a8423194b28a6c1bd66e6b20419bda)
 ### Installations:
 In addition of Anaconda distribution. you need to install the following pagckages using pip --install command
 Installations
